@@ -1,0 +1,153 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.update-box {
+  display: flex;
+}
+
+.update-title {
+  font-size: 3em;
+  font-weight: 600;
+  line-height: 0.5em;
+}
+.update-btn {
+  width: 4em;
+  height: 4em;
+  border: 2px solid #000;
+  border-radius: 50%;
+  margin-left: 5em;
+  background-color: inherit;
+  box-shadow: lightslategray;
+}
+
+/* @keyframes rotate {
+  to {
+    transform: rotate(360deg);
+  }
+} */
+
+.update-btn:hover, .update {
+  animation: rotate 1s linear infinite;
+}
+
+.update {
+  display: inline-block;
+  width: 2em;
+  height: 2em;
+  border: 2px solid transparent;
+  border-bottom-color: green;
+  border-top-color: green;
+  border-radius: 50%;
+  position: relative;
+  left: -6px;
+  bottom: -2px;
+}
+
+.update::after,
+.update::before {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 0;
+  border: 8px solid transparent;
+  border-top-color: green;
+}
+
+.update::before {
+  top: 0px;
+  left: 23px;
+  transform: rotate(-45deg);
+}
+
+.update::after {
+  top: 15px;
+  left: -8px;
+  transform: rotate(135deg);
+}
+
+.notes-list {
+  margin-top: 3em;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-column-gap: 2.5em;
+  grid-row-gap: 3em;
+}
+
+.item {
+  padding: 2em;
+  border: 2px solid #000;
+  width: 300px;
+  height: 250px;
+  position: relative;
+  box-shadow: lightslategray;
+  word-wrap: break-word;
+}
+
+.list-item-btn {
+  width: 2em;
+  height: 2em;
+  position: absolute;
+  border: 2px solid #000;
+  border-radius: 50%;
+  background-color: inherit;
+  font-size: 2rem;
+  color: red;
+  top: -32px;
+  right: -32px;
+  background-color: #fff;
+  box-shadow: lightslategray;
+}
+
+.list-item-content {
+  line-height: 2;
+  height: 185px;
+  overflow-y: auto;
+}
+
+.add-form.form {
+  margin-top: 2em;
+  position: relative;
+}
+
+.add-form-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  padding: 0.5em 1em;
+}
+
+.add-form-textarea {
+  border: 2px solid #000;
+  padding: 1em;
+  box-shadow: lightslategray;
+  width: 100%;
+  resize: none;
+}
+
+.add-form-btn {
+  position: absolute;
+  width: 4em;
+  height: 4em;
+  border: 2px solid #000;
+  border-radius: 50%;
+  box-shadow: lightslategray;
+  bottom: 20px;
+  left: 220px;
+  cursor: pointer;
+}
+
+.add-form-btn::before {
+  content: "";
+  position: absolute;
+  top: 11px;
+  right: 15px;
+  display: block;
+  width: 20px;
+  height: 20px;
+  border-right: 18px solid green;
+  border-bottom: 18px solid green;
+  transform: rotate(-45deg);
+}
